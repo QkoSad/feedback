@@ -5,6 +5,7 @@ function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10);
   const { feedbackEdit } = useContext(FeedbackContext);
   const handleChange = (e) => {
+    console.log(e,typeof e)
     setSelected(+e.currentTarget.value);
     select(+e.currentTarget.value);
   };
